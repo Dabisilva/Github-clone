@@ -1,7 +1,6 @@
 import React from 'react';
-import { StringifyOptions } from 'querystring';
 
-import { Container } from './styles';
+import { Container, Flex, Avatar, Row, PeapleIcon, Column, CompaniIcon, LocationIcon, EmailIcon, BlogIcon } from './styles';
 
 interface ProfileDataProps {
     userName: string
@@ -28,7 +27,55 @@ const ProfileData: React.FC<ProfileDataProps> = ({
 }) => {
     return (
         <Container>
+            <Flex>
+                <Avatar src={avatarUrl} alt={userName} />
 
+                <div>
+                    <h1>{name}</h1>
+                    <h2>{userName}</h2>
+                </div>
+            </Flex>
+
+            <Row>
+                <li>
+                    <PeapleIcon />
+                    <b>{followers}</b>
+                    <span>followers</span>
+                    <span>·</span>
+                </li>
+
+                <li>
+                    <b>{following}</b>
+                    <span>following</span>
+                </li>
+            </Row>
+
+            <Column>
+                    {company && (
+                        <li>
+                            <CompaniIcon />
+                            <span>{company}</span>
+                        </li>
+                    )}
+                    {location && (
+                        <li>
+                            <LocationIcon />
+                            <span>{location}</span>
+                        </li>
+                    )}
+                    {email && (
+                        <li>
+                            <EmailIcon />
+                            <span>{email}</span>
+                        </li>
+                    )}
+                    {blog && (
+                        <li>
+                            <BlogIcon />
+                            <span>{blog}</span>
+                        </li>
+                    )}
+            </Column>
         </Container>
     );
 }

@@ -28,7 +28,7 @@ export const SearchForm = styled.form`
 
         &:focus{
             width: 318px;
-
+            background: #fafbfc
         }
 
         transition: width .2s ease-out, color .2s ease-out;
