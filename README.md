@@ -1,3 +1,3 @@
 ### Github-clone
 
-# Clone do github usando Reactjs com typescript consumindo a api v3 do próprio github.
+# Github clone using Reactjs with typescript consuming github's own v3 api.
